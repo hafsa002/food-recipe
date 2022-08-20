@@ -18,12 +18,8 @@ function getMealList(){
     .then(response => response.json())
     .then(data => {
 
-        if(data.meals =''){
-            alert("enter recipe name");
-
-        }else{
         let html = "";
-        if(data.meals){
+            if(data.meals){
             data.meals.forEach(meal => {
                 html += `
                     <div class = "meal-item" data-id = "${meal.idMeal}">
@@ -48,7 +44,6 @@ function getMealList(){
 
         mealList.innerHTML = html;
 
- }
  });
 }
 
